@@ -33,7 +33,7 @@ const page = () => {
       </Row>
       <Row>
         <Col xs={24} sm={8} className="my-auto animate-fade-right">
-          <p className="text-xl text-center pr-10 responsive-font max-[576px]:pt-20">
+          <p className="text-xl text-center max-[576px]:pb-10  min-[576px]:pr-10 responsive-font max-[576px]:pt-20">
             Our research shows consumers are 50% more likely to buy a product if
             it has a patent or related IP{" "}
           </p>
@@ -42,7 +42,7 @@ const page = () => {
           <Image src="/lightBulb.png" width={612} height={408} alt="lightBulb" />
         </Col>
         <Col xs={24} sm={8} className="my-auto animate-fade-left">
-          <p className="text-xl text-center pl-16 responsive-font max-[576px]:pt-5">
+          <p className="text-xl text-center max-[576px]:pt-10 min-[576px]:pl-16 responsive-font max-[576px]:pt-5">
             Companies with IP have a 10.4X higher chance of getting funding.
             (Peer reviewed study from the European USTPO)
           </p>
@@ -64,7 +64,7 @@ const page = () => {
         <Col
           xs={24}
           sm={8}
-          className="min-[575px]:pl-20 max-[576px]:text-center animate-fade-right"
+          className="min-[575px]:pl-20 max-[576px]:pb-10 max-[576px]:text-center animate-fade-right"
         >
           <div className="h-[92px!important]">
             <img src="/makridakisLogo.png" className="max-[575px]:mx-auto pt-5" />
@@ -74,7 +74,7 @@ const page = () => {
         <Col
           xs={24}
           sm={8}
-          className="min-[575px]:pl-20 max-[576px]:text-center animate-fade-up"
+          className="min-[575px]:pl-20 max-[576px]:pb-10 max-[576px]:text-center animate-fade-up"
         >
           <div className="h-[92px!important]">
             <img src="/blacMesaLogo.png" className="max-[575px]:mx-auto" />

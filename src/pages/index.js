@@ -57,7 +57,7 @@ const Page = () => {
       >
         <a>
           <span
-            className={`self-center text-2xl font-semibold whitespace-nowrap ${
+            className={`self-center text-lg font-light whitespace-nowrap ${
               navbarPosition ? "dark:text-black" : "dark:text-white"
             }`}
           >
@@ -88,7 +88,7 @@ const Page = () => {
             <Menu.Item key="1">Home</Menu.Item>
             <Menu.Item key="2">About</Menu.Item>
             <Menu.Item key="3">Services</Menu.Item>
-            <Button type={navbarPosition ? "primary" : ""}>BUY NOW</Button>
+            <Button type={navbarPosition ? "primary" : ""}>Sign In</Button>
           </Menu>
         )}
 
@@ -110,7 +110,7 @@ const Page = () => {
             <Menu.Item key="3" onClick={closeDrawer}>
               Services
             </Menu.Item>
-            <Button onClick={closeDrawer}>BUY NOW</Button>
+            <Button onClick={closeDrawer}>Sign In</Button>
           </Menu>
         </Drawer>
       </div>
@@ -120,7 +120,7 @@ const Page = () => {
           <div className="row">
             <div className="mr-auto col-md-6">
               <div className="brand">
-                <p className="text-[53px] font-normal leading-[3.5rem]">
+                <p className="text-[53px] font-bold leading-[3.5rem]">
                   IP Services <br />
                   and Technology
                 </p>
@@ -139,11 +139,11 @@ const Page = () => {
           <div className="section text-center">
             <div className="row">
               <div className="col-md-8 ml-auto mr-auto">
-                <h2 className="text-4xl	">
+                <h2 className="text-4xl	font-bold">
                   Companies with IP have a 10.4X higher chance of getting
                   funding.
                 </h2>
-                <p className="text-[#999] pt-5 text-[17px]">
+                <p className="text-[#999] pt-5 text-[17px] font-light	">
                   {" "}
                   (Peer reviewed study from the European USTPO)
                 </p>
@@ -156,7 +156,10 @@ const Page = () => {
                     <div className="h-[92px!important]">
                       <img src="/makridakisLogo.png" className="pt-3" />
                     </div>
-                    <Link className="text-xl" href="https://makridakispllc.com">
+                    <Link
+                      className="text-lg font-bold"
+                      href="https://makridakispllc.com"
+                    >
                       Makridakis PLLC
                     </Link>
                   </div>
@@ -166,7 +169,10 @@ const Page = () => {
                     <div className="h-[92px!important]">
                       <img src="/blacMesaLogo.png" />
                     </div>
-                    <Link className="text-xl" href="https://makridakispllc.com">
+                    <Link
+                      className="text-lg font-bold"
+                      href="https://makridakispllc.com"
+                    >
                       Black Mesa
                     </Link>
                   </div>
@@ -176,7 +182,7 @@ const Page = () => {
                     <div className="h-[92px!important]">
                       <img src="/vps.png" />
                     </div>
-                    <Link className="text-xl" href="https://makridakispllc.com">
+                    <Link className="text-lg font-bold" href="https://makridakispllc.com">
                       Greg Sachs and Associates
                     </Link>
                   </div>

@@ -145,7 +145,7 @@ const Page = () => {
                 </h2>
                 <p className="text-[#999] pt-5 text-[17px] font-light	">
                   {" "}
-                  (Peer reviewed study from the European USTPO)
+                  Peer reviewed study from the European USTPO
                 </p>
               </div>
             </div>
@@ -182,7 +182,10 @@ const Page = () => {
                     <div className="h-[92px!important]">
                       <img src="/vps.png" />
                     </div>
-                    <Link className="text-lg font-bold" href="https://makridakispllc.com">
+                    <Link
+                      className="text-lg font-bold"
+                      href="https://makridakispllc.com"
+                    >
                       Greg Sachs and Associates
                     </Link>
                   </div>

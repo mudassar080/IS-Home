@@ -46,14 +46,15 @@ const Page = () => {
                   Introsteller
                 </p>
                 <p className="text-lg	 font-light my-[10px]">
-                  IP Services and Technology
+                  IP Services and Technology <br />
+                  Become an inventor and file your first patent
                 </p>
                 <br />
                 <Button
                   type="primary"
                   className="text-sm font-medium py-[26px] px-9 my-[5px] uppercase"
                 >
-                  Become an inventor and file your first patent
+                  File Now
                 </Button>
               </div>
             </div>

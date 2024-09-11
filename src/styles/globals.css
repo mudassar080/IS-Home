@@ -7,7 +7,7 @@ body {
 }
 
 .background-image {
-  background-image: url("/lightBulbBackground.svg");
+  background-image: url("/lightBulbBg.png");
   height: 100vh;
   overflow: hidden;
   position: relative;
@@ -17,6 +17,10 @@ body {
   -webkit-box-align: center;
   align-items: center;
   justify-content: center;
+}
+
+.height65 {
+  height: 65vh !important;
 }
 
 .overlay::before {
@@ -45,6 +49,12 @@ body {
 .container {
   z-index: 2;
   position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.ant-menu-inline {
+  border-inline-end: 0 !important;
 }
 
 .row {
@@ -97,6 +107,53 @@ body {
 .mobile-menu-button {
   display: none;
   background: transparent !important;
+}
+
+.ant-menu-item,
+.ant-menu-item:hover::after {
+  border-bottom: none !important;
+}
+.ant-menu-item,
+.ant-menu-item {
+  border-bottom: none !important;
+}
+
+.menu-desktop .ant-menu-item {
+  border-bottom: none;
+}
+
+.menu-desktop .ant-menu-item:hover,
+.menu-desktop .ant-menu-item-selected {
+  border-bottom: none;
+}
+
+.ant-menu-horizontal > .ant-menu-item::after,
+.ant-menu-horizontal > .ant-menu-submenu::after {
+  border-bottom: none !important;
+  transition: none !important;
+}
+
+.counting-list {
+  text-align: left;
+  list-style-type: decimal;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.bullet-list {
+  text-align: left;
+  list-style-type: disc;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.bullet-list li {
+  margin-left: 1em;
+}
+
+.ant-btn-default:hover {
+  color: black !important;
+  border-color: transparent !important;
 }
 
 @media (max-width: 768px) {

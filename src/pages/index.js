@@ -1,133 +1,59 @@
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useRef, useCallback } from "react";
 import Button from "../../components/Button";
-import { Drawer, Menu } from "antd";
-import { MenuOutlined } from "@ant-design/icons";
+import { handleScroll } from "../../utils";
+
+const lawyers = [
+  {
+    name: "Makridakis PLLC",
+    logo: "/makridakisLogo.png",
+    url: "https://makridakispllc.com",
+  },
+  {
+    name: "Black Mesa",
+    logo: "/blacMesaLogo.png",
+    url: "https://makridakispllc.com",
+  },
+  {
+    name: "Greg Sachs and Associates",
+    logo: "/vps.png",
+    url: "https://makridakispllc.com",
+  },
+];
 
 const Page = () => {
-  const [navbarPosition, setNavbarPosition] = useState(false);
-  const [visible, setVisible] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const overlayRef = useRef(null);
 
-  const showDrawer = () => {
-    setVisible(true);
-  };
-
-  const closeDrawer = () => {
-    setVisible(false);
-  };
-
-  const handleResize = () => {
-    if (window.innerWidth <= 768) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-      setVisible(false);
-    }
-  };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setNavbarPosition(true);
-      } else {
-        setNavbarPosition(false);
-      }
-    };
-
-    handleResize();
-
-    window.addEventListener("resize", handleResize);
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleResize);
-    };
+  const onScroll = useCallback(() => {
+    handleScroll(overlayRef);
   }, []);
 
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
   return (
     <>
-      <div
-        className={`${
-          navbarPosition
-            ? "bg-white shadow-[0_4px_18px_0_rgba(0,0,0,.12)]"
-            : "bg-transparent"
-        } fixed flex items-center justify-between w-full z-20 top-0 start-0 transition-colors duration-300 py-2 px-10`}
-      >
-        <a>
-          <span
-            className={`self-center text-lg font-light whitespace-nowrap ${
-              navbarPosition ? "dark:text-black" : "dark:text-white"
-            }`}
-          >
-            Introstellar
-          </span>
-        </a>
-
-        {/* Hamburger Button for Mobile */}
-        {isMobile ? (
-          <div
-            onClick={showDrawer}
-            className={`mobile-menu-button ${
-              navbarPosition ? "" : "text-white"
-            }`}
-          >
-            <MenuOutlined />
-          </div>
-        ) : null}
-
-        {/* Menu for larger screens */}
-        {!isMobile && (
-          <Menu
-            mode="horizontal"
-            className={`menu-desktop ${
-              navbarPosition ? "" : "white-text-custom"
-            }`}
-          >
-            <Menu.Item key="1">Home</Menu.Item>
-            <Menu.Item key="2">About</Menu.Item>
-            <Menu.Item key="3">Services</Menu.Item>
-            <Button type={navbarPosition ? "primary" : ""}>Sign In</Button>
-          </Menu>
-        )}
-
-        {/* Drawer for mobile view */}
-        <Drawer
-          title="Menu"
-          placement="right"
-          onClose={closeDrawer}
-          visible={visible}
-          className="menu-mobile"
-        >
-          <Menu>
-            <Menu.Item key="1" onClick={closeDrawer}>
-              Home
-            </Menu.Item>
-            <Menu.Item key="2" onClick={closeDrawer}>
-              About
-            </Menu.Item>
-            <Menu.Item key="3" onClick={closeDrawer}>
-              Services
-            </Menu.Item>
-            <Button onClick={closeDrawer}>Sign In</Button>
-          </Menu>
-        </Drawer>
-      </div>
-
-      <div className="background-image overlay">
+      <div ref={overlayRef} className="background-image overlay">
         <div className="container">
           <div className="row">
-            <div className="mr-auto col-md-6">
+            <div className="mr-auto max-[640px]:mx-2 col-md-6">
               <div className="brand">
-                <p className="text-[53px] font-bold leading-[3.5rem]">
-                  IP Services <br />
-                  and Technology
+                <p className="text-[53px] font-bold mt-[30px] mb-[25px]">
+                  Introsteller
                 </p>
-                <Button type="primary" size="large" className="mt-3">
-                  <div className="text-sm font-medium">
-                    Click here to become an inventor and file your first patent
-                  </div>
+                <p className="text-lg	 font-light my-[10px]">
+                  IP Services and Technology
+                </p>
+                <br />
+                <Button
+                  type="primary"
+                  className="text-sm font-medium py-[26px] px-9 my-[5px] uppercase"
+                >
+                  Become an inventor and file your first patent
                 </Button>
               </div>
             </div>
@@ -139,57 +65,34 @@ const Page = () => {
           <div className="section text-center">
             <div className="row">
               <div className="col-md-8 ml-auto mr-auto">
-                <h2 className="text-4xl	font-bold">
-                  Companies with IP have a 10.4X higher chance of getting
-                  funding.
-                </h2>
                 <p className="text-[#999] pt-5 text-[17px] font-light	">
                   {" "}
-                  Peer reviewed study from the European USTPO
+                  Companies with IP have a 10.4X higher chance of getting
+                  funding.Peer reviewed study from the European USTPO
                 </p>
               </div>
             </div>
             <div>
-              <div className="row justify-center">
-                <div className="col-md-4 mx-4">
-                  <div className="info">
-                    <div className="h-[92px!important]">
-                      <img src="/makridakisLogo.png" className="pt-3" />
+              <h2 className="text-4xl	font-bold mt-8">
+                Partnered with Experienced Lawyers/Firms
+              </h2>
+              <div className="row max-[640px]:flex-col justify-center">
+                {lawyers.map((lawyer) => (
+                  <div key={lawyer.name} className="col-md-4 mx-4">
+                    <div className="info">
+                      <div className="h-[92px!important]">
+                        <img
+                          src={lawyer.logo}
+                          alt={lawyer.name}
+                          className="max-[640px]:mx-auto"
+                        />
+                      </div>
+                      <Link className="text-lg font-bold" href={lawyer.url}>
+                        {lawyer.name}
+                      </Link>
                     </div>
-                    <Link
-                      className="text-lg font-bold"
-                      href="https://makridakispllc.com"
-                    >
-                      Makridakis PLLC
-                    </Link>
                   </div>
-                </div>
-                <div className="col-md-4 mx-4">
-                  <div className="info">
-                    <div className="h-[92px!important]">
-                      <img src="/blacMesaLogo.png" />
-                    </div>
-                    <Link
-                      className="text-lg font-bold"
-                      href="https://makridakispllc.com"
-                    >
-                      Black Mesa
-                    </Link>
-                  </div>
-                </div>
-                <div className="col-md-4 mx-4">
-                  <div className="info">
-                    <div className="h-[92px!important]">
-                      <img src="/vps.png" />
-                    </div>
-                    <Link
-                      className="text-lg font-bold"
-                      href="https://makridakispllc.com"
-                    >
-                      Greg Sachs and Associates
-                    </Link>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>

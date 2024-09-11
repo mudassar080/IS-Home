@@ -19,13 +19,9 @@ export default ({ children }) => {
   const [navbarPosition, setNavbarPosition] = useState(false);
   const [visible, setVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [openKeys, setOpenKeys] = useState([]);
+  const [openKeys, setOpenKeys] = useState(false);
 
-  const handleSubMenuClick = (key) => {
-    if (openKeys.includes(key))
-      setOpenKeys(openKeys.filter((openKey) => openKey !== key));
-    else setOpenKeys([key]);
-  };
+  const handleSubMenuClick = () => setOpenKeys(!openKeys);
 
   const showDrawer = () => setVisible(true);
 
@@ -132,23 +128,22 @@ export default ({ children }) => {
                 About
               </Menu.Item>
               <SubMenu
-                onTitleClick={() => handleSubMenuClick("services")}
+                onTitleClick={() => handleSubMenuClick()}
                 key="services"
                 title={
                   <p className={navbarPosition ? "text-black" : "text-white"}>
                     Services{" "}
-                    {openKeys.includes("services") ? (
-                      <CaretUpOutlined />
-                    ) : (
-                      <CaretDownOutlined />
-                    )}
+                    {openKeys ? <CaretUpOutlined /> : <CaretDownOutlined />}
                   </p>
                 }
               >
                 {subMenuUrl.map((item) => (
                   <Menu.Item
                     key={item.key}
-                    onClick={() => navigateRoute(`/services/${item.key}`)}
+                    onClick={() => {
+                      navigateRoute(`/services/${item.key}`);
+                      handleSubMenuClick();
+                    }}
                   >
                     {item.label}
                   </Menu.Item>

@@ -43,7 +43,7 @@ const Page = () => {
           <div className="section text-center">
             <div className="row">
               <div className="col-md-8 ml-auto mr-auto">
-                <h2 className="text-4xl	font-medium">
+                <h2 className="text-4xl	font-bold">
                   Safeguarding Your Innovation with Utility Patents
                 </h2>
                 <TextBlock>
@@ -58,7 +58,7 @@ const Page = () => {
                   benefit your invention.
                 </TextBlock>
                 <br />
-                <h2 className="text-4xl	font-medium">
+                <h2 className="text-2xl	font-bold">
                   The Pillars of Utility Patents
                 </h2>
                 <TextBlock>
@@ -103,7 +103,7 @@ const Page = () => {
                   </ol>
                 </div>
                 <br />
-                <h2 className="text-4xl	font-medium">Strategic Advantages</h2>
+                <h2 className="text-2xl	font-bold">Strategic Advantages</h2>
                 <TextBlock>
                   {" "}
                   Securing a utility patent is more than just a defensive

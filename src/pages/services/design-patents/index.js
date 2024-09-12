@@ -43,7 +43,7 @@ const Page = () => {
           <div className="section text-center">
             <div className="row">
               <div className="col-md-8 ml-auto mr-auto">
-                <h2 className="text-4xl	font-medium">
+                <h2 className="text-4xl	font-bold">
                   Protecting Your Invention's Visual Appeal
                 </h2>
                 <TextBlock>
@@ -54,7 +54,7 @@ const Page = () => {
                   ornamental and aesthetic aspects.
                 </TextBlock>
                 <br />
-                <h2 className="text-4xl	font-medium">
+                <h2 className="text-2xl	font-bold">
                   The Benefits of Design Patents
                 </h2>
                 <TextBlock>
@@ -100,7 +100,7 @@ const Page = () => {
                     </li>
                   </ol>
                 </div>
-                <h2 className="text-4xl	font-medium">
+                <h2 className="text-2xl	font-bold">
                   Leveraging Your Design Patent
                 </h2>
                 <div className="flex justify-center items-center">

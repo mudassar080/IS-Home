@@ -43,7 +43,7 @@ const Page = () => {
           <div className="section text-center">
             <div className="row">
               <div className="col-md-8 ml-auto mr-auto">
-                <h2 className="text-4xl	font-medium">
+                <h2 className="text-4xl	font-bold">
                   Fast and Economic Protection
                 </h2>
                 <TextBlock>
@@ -55,7 +55,7 @@ const Page = () => {
                   you refine your creation.
                 </TextBlock>
                 <br />
-                <h2 className="text-4xl	font-medium">
+                <h2 className="text-2xl	font-bold">
                   The Benefits of Filing a Provisional Patent Application
                 </h2>
                 <div className="flex justify-center items-center">
@@ -98,7 +98,7 @@ const Page = () => {
                   </ol>
                 </div>
                 <br />
-                <h2 className="text-4xl	font-medium">
+                <h2 className="text-2xl	font-bold">
                   Navigating the Provisional Patent Journey
                 </h2>
                 <TextBlock>

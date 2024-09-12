@@ -43,7 +43,7 @@ const Page = () => {
           <div className="section text-center">
             <div className="row">
               <div className="col-md-8 ml-auto mr-auto">
-                <h2 className="text-4xl	font-medium">Your Trusted Ally</h2>
+                <h2 className="text-4xl	font-bold">Your Trusted Ally</h2>
                 <ol className="counting-list text-[#999] pt-5 text-[17px] font-light max-[640px]:pl-[15px]">
                   <li>
                     <span className="font-medium">USPTO Database Search: </span>{" "}
@@ -105,7 +105,7 @@ const Page = () => {
                   </li>
                 </ol>
                 <br />
-                <h2 className="text-4xl	font-medium">
+                <h2 className="text-2xl	font-bold">
                   Secure Your Brand Identity Today
                 </h2>
                 <TextBlock>

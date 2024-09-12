@@ -62,6 +62,19 @@ export default ({ children }) => {
     { key: "trademarks", label: "Trademarks" },
   ];
 
+  const footerMenuUrl = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/services/patent-searches", label: "Patent Searches" },
+    { href: "/services/utility-patents", label: "Utility Patents" },
+    {
+      href: "/services/provisional-patents",
+      label: "Provisional Patents",
+    },
+    { href: "/services/design-patents", label: "Design Patents" },
+    { href: "/services/trademarks", label: "Trademarks" },
+  ];
+
   if (noLayoutPaths.includes(pathname)) return <>{children}</>;
 
   return (
@@ -187,6 +200,7 @@ export default ({ children }) => {
         </div>
       </div>
       <div>{children}</div>
+      <footer className="py-5 flex justify-center"></footer>
     </div>
   );
 };

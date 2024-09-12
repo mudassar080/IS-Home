@@ -42,12 +42,14 @@ const Page = () => {
           <div className="row">
             <div className="mr-auto max-[640px]:mx-2 col-md-6">
               <div className="brand">
-                <h1 className="text-[53px] font-bold mt-[30px] mb-[25px]">
+                <h1 className="text-[53px] font-bold mt-[30px] leading-[46px]">
                   Introsteller
                 </h1>
+                <h2 className="text-2xl	font-bold">
+                  IP Services and Technology
+                </h2>
                 <p className="text-lg	 font-light my-[10px]">
-                  IP Services and Technology <br />
-                  Become an inventor and file your first patent
+                  Become an inventor and start filing your first patent today.
                 </p>
                 <br />
                 <Button

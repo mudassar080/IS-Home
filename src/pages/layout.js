@@ -62,19 +62,6 @@ export default ({ children }) => {
     { key: "trademarks", label: "Trademarks" },
   ];
 
-  const footerMenuUrl = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/services/patent-searches", label: "Patent Searches" },
-    { href: "/services/utility-patents", label: "Utility Patents" },
-    {
-      href: "/services/provisional-patents",
-      label: "Provisional Patents",
-    },
-    { href: "/services/design-patents", label: "Design Patents" },
-    { href: "/services/trademarks", label: "Trademarks" },
-  ];
-
   if (noLayoutPaths.includes(pathname)) return <>{children}</>;
 
   return (
@@ -200,25 +187,6 @@ export default ({ children }) => {
         </div>
       </div>
       <div>{children}</div>
-      <footer className="py-5 flex justify-center">
-        <div className="container flex max-[625px]:text-center">
-          <div className="max-[625px]:mx-auto">
-            {footerMenuUrl.map((item, idx) => (
-              <React.Fragment key={idx}>
-                <Link
-                  href={item.href}
-                  className="p-2 text-xs font-medium uppercase"
-                >
-                  {item.label}
-                </Link>
-                {idx === 2 || idx === 4 ? (
-                  <br className="hidden max-[625px]:block" />
-                ) : null}
-              </React.Fragment>
-            ))}
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };

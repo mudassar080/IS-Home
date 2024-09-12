@@ -39,7 +39,7 @@ const Page = () => {
       </div>
       <div className="main main-raised">
         <div className="container mr-auto ml-auto">
-          <div className="section text-center">
+          <div className="section">
             <div className="row">
               <div className="col-md-8 ml-auto mr-auto">
                 <h2 className="text-4xl	font-medium">
@@ -79,7 +79,7 @@ const Page = () => {
                   competitors, the insights gained are invaluable. By
                   understanding the existing patent landscape, you can:
                 </TextBlock>
-                <div className="flex justify-center items-center">
+                <div>
                   <ul className="bullet-list text-[#999] pt-5 text-[17px] font-light">
                     <li>Identify potential obstacles and opportunities</li>
                     <li>

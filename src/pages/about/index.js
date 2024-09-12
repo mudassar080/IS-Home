@@ -31,7 +31,7 @@ const Page = () => {
       </div>
       <div className="main main-raised">
         <div className="container mr-auto ml-auto">
-          <div className="section text-center">
+          <div className="section">
             <div className="row">
               <div className="col-md-8 ml-auto mr-auto">
                 <h2 className="text-4xl	font-medium">Our Mission</h2>

@@ -19,9 +19,6 @@ export default ({ children }) => {
   const [navbarPosition, setNavbarPosition] = useState(false);
   const [visible, setVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [openKeys, setOpenKeys] = useState(false);
-
-  const handleSubMenuClick = () => setOpenKeys(!openKeys);
 
   const showDrawer = () => setVisible(true);
 
@@ -136,23 +133,18 @@ export default ({ children }) => {
                 About
               </Menu.Item>
               <SubMenu
-                onTitleClick={() => handleSubMenuClick()}
                 key="services"
                 className="uppercase"
                 title={
                   <p className={navbarPosition ? "text-black" : "text-white"}>
-                    Services{" "}
-                    {openKeys ? <CaretUpOutlined /> : <CaretDownOutlined />}
+                    Services <CaretDownOutlined />
                   </p>
                 }
               >
                 {subMenuUrl.map((item) => (
                   <Menu.Item
                     key={item.key}
-                    onClick={() => {
-                      navigateRoute(`/services/${item.key}`);
-                      handleSubMenuClick();
-                    }}
+                    onClick={() => navigateRoute(`/services/${item.key}`)}
                   >
                     {item.label}
                   </Menu.Item>

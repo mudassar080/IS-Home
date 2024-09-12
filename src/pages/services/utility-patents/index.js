@@ -40,7 +40,7 @@ const Page = () => {
       </div>
       <div className="main main-raised">
         <div className="container mr-auto ml-auto">
-          <div className="section text-center">
+          <div className="section">
             <div className="row">
               <div className="col-md-8 ml-auto mr-auto">
                 <h2 className="text-4xl	font-bold">
@@ -65,7 +65,7 @@ const Page = () => {
                   {" "}
                   Utility patents encompass the very essence of ingenuity:
                 </TextBlock>
-                <div className="flex justify-center items-center">
+                <div>
                   <ul className="bullet-list text-[#999] pt-5 text-[17px] font-light">
                     <li>Processes</li>
                     <li>Machines</li>
@@ -85,7 +85,7 @@ const Page = () => {
                   The Benefits of Securing a Utility Patent Obtaining a utility
                   patent offers several strategic advantages:
                 </TextBlock>
-                <div className="flex justify-center items-center">
+                <div className="pl-5">
                   <ol className="counting-list text-[#999] pt-5 text-[17px] font-light max-[640px]:pl-[15px]">
                     <li>
                       <span className="font-medium">Protection: </span>{" "}
@@ -112,7 +112,7 @@ const Page = () => {
                   commercial triumph and set the stage for success. Your utility
                   patent:
                 </TextBlock>
-                <div className="flex justify-center items-center">
+                <div>
                   <ul className="bullet-list text-[#999] pt-5 text-[17px] font-light">
                     <li>
                       Protects your invention from imitation and infringement

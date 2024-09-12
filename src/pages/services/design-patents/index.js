@@ -40,7 +40,7 @@ const Page = () => {
       </div>
       <div className="main main-raised">
         <div className="container mr-auto ml-auto">
-          <div className="section text-center">
+          <div className="section">
             <div className="row">
               <div className="col-md-8 ml-auto mr-auto">
                 <h2 className="text-4xl	font-bold">
@@ -61,7 +61,7 @@ const Page = () => {
                   {" "}
                   Utility patents encompass the very essence of ingenuity:
                 </TextBlock>
-                <div className="flex justify-center items-center">
+                <div className="pl-5">
                   <ol className="counting-list text-[#999] pt-5 text-[17px] font-light max-[640px]:pl-[15px]">
                     <li>
                       <span className="font-medium">
@@ -103,7 +103,7 @@ const Page = () => {
                 <h2 className="text-2xl	font-bold">
                   Leveraging Your Design Patent
                 </h2>
-                <div className="flex justify-center items-center">
+                <div>
                   <ul className="bullet-list text-[#999] pt-5 text-[17px] font-light">
                     <li>
                       Use your design patent to prevent competitors from copying

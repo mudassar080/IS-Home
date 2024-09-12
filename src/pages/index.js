@@ -45,10 +45,10 @@ const Page = () => {
                 <h1 className="text-[53px] font-bold mt-[30px] leading-[46px]">
                   Introsteller
                 </h1>
-                <h2 className="text-2xl	font-bold">
+                <h2 className="text-[20px] mt-1	font-bold">
                   IP Services and Technology
                 </h2>
-                <p className="text-lg	 font-light my-[10px]">
+                <p className="text-lg font-light my-[10px]">
                   Become an inventor and start filing your first patent today.
                 </p>
                 <br />

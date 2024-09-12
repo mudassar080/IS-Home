@@ -23,7 +23,7 @@ const Page = () => {
           <div className="row">
             <div className="mx-auto text-center col-md-6">
               <div className="brand">
-                <p className="text-[53px] font-bold leading-[3.5rem]">About</p>
+                <h1 className="text-[53px] font-bold leading-[3.5rem]">About</h1>
               </div>
             </div>
           </div>
@@ -34,7 +34,7 @@ const Page = () => {
           <div className="section text-center">
             <div className="row">
               <div className="col-md-8 ml-auto mr-auto">
-                <h2 className="text-4xl	font-bold">Our Mission</h2>
+                <h2 className="text-4xl	font-medium">Our Mission</h2>
                 <TextBlock>
                   {" "}
                   At Introstellar IP, we believe that intellectual property

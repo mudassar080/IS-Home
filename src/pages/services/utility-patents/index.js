@@ -24,9 +24,9 @@ const Page = () => {
           <div className="row">
             <div className="mx-auto text-center max-[425px]:mx-2 col-md-6">
               <div className="brand">
-                <p className="text-[53px] pb-5 font-bold leading-[3.5rem]">
+                <h1 className="text-[53px] pb-5 font-bold leading-[3.5rem]">
                   Utility Patents
-                </p>
+                </h1>
                 <Button
                   type="primary"
                   className="py-[26px] px-9 my-[5px] uppercase"
@@ -43,7 +43,7 @@ const Page = () => {
           <div className="section text-center">
             <div className="row">
               <div className="col-md-8 ml-auto mr-auto">
-                <h2 className="text-4xl	font-bold">
+                <h2 className="text-4xl	font-medium">
                   Safeguarding Your Innovation with Utility Patents
                 </h2>
                 <TextBlock>
@@ -58,7 +58,7 @@ const Page = () => {
                   benefit your invention.
                 </TextBlock>
                 <br />
-                <h2 className="text-4xl	font-bold">
+                <h2 className="text-4xl	font-medium">
                   The Pillars of Utility Patents
                 </h2>
                 <TextBlock>
@@ -103,7 +103,7 @@ const Page = () => {
                   </ol>
                 </div>
                 <br />
-                <h2 className="text-4xl	font-bold">Strategic Advantages</h2>
+                <h2 className="text-4xl	font-medium">Strategic Advantages</h2>
                 <TextBlock>
                   {" "}
                   Securing a utility patent is more than just a defensive

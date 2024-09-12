@@ -117,19 +117,28 @@ export default ({ children }) => {
             <Menu
               triggerSubMenuAction="click"
               mode="horizontal"
-              className={`menu-desktop w-[33%] ${
+              className={`menu-desktop w-[35%] ${
                 navbarPosition ? "" : "white-text-custom"
               }`}
             >
-              <Menu.Item key="home" onClick={() => navigateRoute("/")}>
+              <Menu.Item
+                key="home"
+                className="uppercase"
+                onClick={() => navigateRoute("/")}
+              >
                 Home
               </Menu.Item>
-              <Menu.Item key="about" onClick={() => navigateRoute("/about")}>
+              <Menu.Item
+                key="about"
+                className="uppercase"
+                onClick={() => navigateRoute("/about")}
+              >
                 About
               </Menu.Item>
               <SubMenu
                 onTitleClick={() => handleSubMenuClick()}
                 key="services"
+                className="uppercase"
                 title={
                   <p className={navbarPosition ? "text-black" : "text-white"}>
                     Services{" "}
@@ -204,7 +213,10 @@ export default ({ children }) => {
           <div className="max-[625px]:mx-auto">
             {footerMenuUrl.map((item, idx) => (
               <React.Fragment key={idx}>
-                <Link href={item.href} className="p-2 text-xs font-medium">
+                <Link
+                  href={item.href}
+                  className="p-2 text-xs font-medium uppercase"
+                >
                   {item.label}
                 </Link>
                 {idx === 2 || idx === 4 ? (

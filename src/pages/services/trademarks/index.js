@@ -24,9 +24,9 @@ const Page = () => {
           <div className="row">
             <div className="mx-auto text-center col-md-6">
               <div className="brand">
-                <p className="text-[53px] pb-5 font-bold leading-[3.5rem]">
+                <h1 className="text-[53px] pb-5 font-bold leading-[3.5rem]">
                   Trademarks
-                </p>
+                </h1>
                 <Button
                   type="primary"
                   className="py-[26px] px-9 my-[5px] uppercase"
@@ -43,7 +43,7 @@ const Page = () => {
           <div className="section text-center">
             <div className="row">
               <div className="col-md-8 ml-auto mr-auto">
-                <h2 className="text-4xl	font-bold">Your Trusted Ally</h2>
+                <h2 className="text-4xl	font-medium">Your Trusted Ally</h2>
                 <ol className="counting-list text-[#999] pt-5 text-[17px] font-light max-[640px]:pl-[15px]">
                   <li>
                     <span className="font-medium">USPTO Database Search: </span>{" "}
@@ -105,7 +105,7 @@ const Page = () => {
                   </li>
                 </ol>
                 <br />
-                <h2 className="text-4xl	font-bold">
+                <h2 className="text-4xl	font-medium">
                   Secure Your Brand Identity Today
                 </h2>
                 <TextBlock>

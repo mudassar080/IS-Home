@@ -2,8 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Roboto Slab", "Times New Roman", serif;
+}
+
+body {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
 
 .background-image {

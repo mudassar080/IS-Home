@@ -42,9 +42,9 @@ const Page = () => {
           <div className="row">
             <div className="mr-auto max-[640px]:mx-2 col-md-6">
               <div className="brand">
-                <p className="text-[53px] font-bold mt-[30px] mb-[25px]">
+                <h1 className="text-[53px] font-bold mt-[30px] mb-[25px]">
                   Introsteller
-                </p>
+                </h1>
                 <p className="text-lg	 font-light my-[10px]">
                   IP Services and Technology <br />
                   Become an inventor and file your first patent
@@ -66,17 +66,12 @@ const Page = () => {
           <div className="section text-center">
             <div className="row">
               <div className="col-md-8 ml-auto mr-auto">
-                <p className="text-[#999] pt-5 text-[17px] font-light	">
-                  {" "}
-                  Companies with IP have a 10.4X higher chance of getting
-                  funding.Peer reviewed study from the European USTPO
-                </p>
+                <h2 className="text-4xl	font-medium mt-8">
+                  Partnered with Experienced Lawyers & Firms
+                </h2>
               </div>
             </div>
             <div>
-              <h2 className="text-4xl	font-bold mt-8">
-                Partnered with Experienced Lawyers/Firms
-              </h2>
               <div className="row max-[640px]:flex-col justify-center">
                 {lawyers.map((lawyer) => (
                   <div key={lawyer.name} className="col-md-4 mx-4">
@@ -95,6 +90,11 @@ const Page = () => {
                   </div>
                 ))}
               </div>
+              <p className="text-[#999] pt-5 text-[17px] font-light	">
+                {" "}
+                Companies with IP have a 10.4X higher chance of getting
+                funding.Peer reviewed study from the European USTPO
+              </p>
             </div>
           </div>
         </div>

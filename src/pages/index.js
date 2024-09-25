@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React, { useEffect, useRef, useCallback } from "react";
 import Button from "../../components/Button";
 import { handleScroll } from "../../utils";
@@ -23,6 +24,7 @@ const lawyers = [
 
 const Page = () => {
   const overlayRef = useRef(null);
+  const { push } = useRouter();
 
   const onScroll = useCallback(() => {
     handleScroll(overlayRef);
@@ -53,8 +55,9 @@ const Page = () => {
                 </p>
                 <br />
                 <Button
+                  onClick={() => push("https://app.introstellar-ip.com/")}
                   type="primary"
-                  className="text-sm font-medium py-[26px] px-9 my-[5px] uppercase"
+                  className="text-sm font-medium py-[26px] px-9 my-[5px] uppercase duration-300 animate-pulse"
                 >
                   File Now
                 </Button>

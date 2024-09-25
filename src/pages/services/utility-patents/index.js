@@ -1,9 +1,11 @@
 import React, { useRef, useEffect, useCallback } from "react";
 import Button from "../../../../components/Button";
 import { handleScroll, TextBlock } from "../../../../utils";
+import { useRouter } from "next/router";
 
 const Page = () => {
   const overlayRef = useRef(null);
+  const { push } = useRouter();
 
   const onScroll = useCallback(() => {
     handleScroll(overlayRef);
@@ -30,6 +32,7 @@ const Page = () => {
                 <Button
                   type="primary"
                   className="py-[26px] px-9 my-[5px] uppercase"
+                  onClick={() => push("https://app.introstellar-ip.com/")}
                 >
                   Start a Utility Patent Filing Now
                 </Button>

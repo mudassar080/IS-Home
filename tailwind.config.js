@@ -7,6 +7,22 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        pulse: "pulse 3s infinite",
+      },
+      keyframes: {
+        pulse: {
+          "0%": {
+            boxShadow: "0 0 0 0 #1677ff",
+          },
+          "70%": {
+            boxShadow: "0 0 0 10px rgba(22, 119, 255, 0)",
+          },
+          "100%": {
+            boxShadow: "0 0 0 20px rgba(22, 119, 255, 0)",
+          },
+        },
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

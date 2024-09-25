@@ -34,6 +34,14 @@ const Page = () => {
           <div className="section">
             <div className="row">
               <div className="col-md-8 ml-auto mr-auto">
+                <TextBlock>
+                  Introstellar derived from the words “interstellar“ meaning
+                  distance between stars and “introspection” meaning to look
+                  inwards. <br />
+                  Introstellar is defined as the space or distance within a
+                  persons mind.
+                </TextBlock>
+                <br />
                 <h2 className="text-4xl	font-medium">Our Mission</h2>
                 <TextBlock>
                   {" "}
@@ -47,39 +55,21 @@ const Page = () => {
                 <TextBlock>
                   {" "}
                   Our mission is to empower innovators by providing the best
-                  cost/value IP services on the market. We achieve this by
+                  value/cost IP services on the market. We achieve this by
                   partnering with professional lawyers and providing
                   cutting-edge legal services that streamline the patent
-                  drafting process. By leveraging our expertise and advanced
-                  tools, we enable law firms to significantly reduce the time
-                  and resources required to draft patent applications,
-                  ultimately lowering costs for their clients.
+                  drafting process. By leveraging our expertise and tools, we
+                  enable law firms to significantly reduce the time and
+                  resources required to draft patent applications, ultimately
+                  lowering costs for their clients.
                 </TextBlock>
                 <br />
                 <TextBlock>
                   {" "}
-                  Through our unique approach, we support lawyers in delivering
-                  more efficient services and help them serve a broader range of
-                  clients. By making patent drafting more cost-effective, we
-                  contribute to a more inclusive IP ecosystem, enabling
-                  inventors from all backgrounds to protect their ideas and
-                  bring them to market.
-                </TextBlock>
-                <br />
-                <TextBlock>
-                  {" "}
-                  At Introstellar IP, we aim to inspire more innovation and
+                  At our core Introstellar aims to inspire more innovation and
                   entrepreneurship worldwide. We strive to be a catalyst for
                   change in the IP landscape, breaking down barriers and making
                   IP protection more accessible to all.
-                </TextBlock>
-                <br />
-                <TextBlock>
-                  {" "}
-                  We're dedicated to delivering the best value IP services to
-                  our partners and their clients, helping them secure the
-                  legitimacy and value they deserve. Together, we can foster a
-                  more innovative and entrepreneurial future.
                 </TextBlock>
                 <br />
               </div>

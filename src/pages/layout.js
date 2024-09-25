@@ -3,11 +3,7 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import Button from "../../components/Button";
 import { Drawer, Menu } from "antd";
-import {
-  MenuOutlined,
-  CaretDownOutlined,
-  CaretUpOutlined,
-} from "@ant-design/icons";
+import { MenuOutlined, CaretDownOutlined } from "@ant-design/icons";
 
 const noLayoutPaths = [""];
 
@@ -60,19 +56,7 @@ export default ({ children }) => {
     { key: "provisional-patents", label: "Provisional Patents" },
     { key: "design-patents", label: "Design Patents" },
     { key: "trademarks", label: "Trademarks" },
-  ];
-
-  const footerMenuUrl = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/services/patent-searches", label: "Patent Searches" },
-    { href: "/services/utility-patents", label: "Utility Patents" },
-    {
-      href: "/services/provisional-patents",
-      label: "Provisional Patents",
-    },
-    { href: "/services/design-patents", label: "Design Patents" },
-    { href: "/services/trademarks", label: "Trademarks" },
+    { key: "price", label: "Price" },
   ];
 
   if (noLayoutPaths.includes(pathname)) return <>{children}</>;
@@ -114,7 +98,7 @@ export default ({ children }) => {
             <Menu
               triggerSubMenuAction="click"
               mode="horizontal"
-              className={`menu-desktop w-[35%] ${
+              className={`menu-desktop w-[390px] ${
                 navbarPosition ? "" : "white-text-custom"
               }`}
             >
@@ -152,6 +136,7 @@ export default ({ children }) => {
               </SubMenu>
               <Menu.Item key="sign_in">
                 <Button
+                  onClick={() => push("https://app.introstellar-ip.com/")}
                   type={navbarPosition ? "primary" : ""}
                   className="rounded-full uppercase"
                 >

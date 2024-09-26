@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import clsx from "clsx";
 import Button from "../../../components/Button";
 import { handleScroll, TextBlock } from "../../../utils";
+import Image from "next/image";
 
 const Page = () => {
   const [selectedPackage, setSelectedPackage] = useState("Patents");
@@ -88,7 +89,7 @@ const Page = () => {
                       "After 1 year you have to file another Provisional or a Non Provisional",
                       "Doesn't allow you to enforce your patent.",
                     ]}
-                    selected={selected}
+                    selected=""
                     onClick={() =>
                       handleGetStartedClick("The Book Mark Package")
                     }
@@ -101,10 +102,8 @@ const Page = () => {
                       "20 Years of Protection",
                       "Grants the right to enforce the patent",
                     ]}
-                    selected={selected}
-                    onClick={() =>
-                      handleGetStartedClick("The Gold Standard Utility Package")
-                    }
+                    selected={"The Gold Standard Utility Package"}
+                    onClick={() => null}
                   />
                   <PackageCard
                     title="The Gold Standard Design Package"
@@ -114,10 +113,8 @@ const Page = () => {
                       "20 Years of Protection For Visual Designs",
                       "Grants the right to enforce the patent",
                     ]}
-                    selected={selected}
-                    onClick={() =>
-                      handleGetStartedClick("The Gold Standard Design Package")
-                    }
+                    selected=""
+                    onClick={() => null}
                   />
                 </>
               )}
@@ -128,8 +125,8 @@ const Page = () => {
                     title="Search Package"
                     priceRange="300-400"
                     features={["Full Patent Search and Report"]}
-                    selected={selected}
-                    onClick={() => handleGetStartedClick("Search Package")}
+                    selected=""
+                    onClick={() => null}
                   />
                   <PackageCard
                     title="Trademarks"
@@ -138,8 +135,8 @@ const Page = () => {
                       "Nationwide Protection Begins Upon Registration",
                       "Create an account and contact us for more details",
                     ]}
-                    selected={selected}
-                    onClick={() => handleGetStartedClick("Trademarks")}
+                    selected={"Trademarks"}
+                    onClick={() => null}
                   />
                   <PackageCard
                     title="Litigation"
@@ -148,8 +145,8 @@ const Page = () => {
                       "Stop others from using your IP",
                       "Create an account and contact us for more details on prices",
                     ]}
-                    selected={selected}
-                    onClick={() => handleGetStartedClick("Litigation")}
+                    selected=""
+                    onClick={() => null}
                   />
                 </>
               )}
@@ -162,74 +159,120 @@ const Page = () => {
                 </h3>
               </div>
               <div className="row max-[992px]:flex-col">
-                <div className="w-4/12 ml-auto max-[992px]:mr-auto max-[992px]:w-full max-w-[360px] pt-[70px] pb-[30px] px-[15px]">
-                  <p className="text-lg font-bold">
-                    Will I have a real Lawyer?
-                  </p>
-                  <TextBlock className="text-sm">
-                    Yes, we will partner you with an official US lawyer.
-                  </TextBlock>
+                <div className="w-4/12 ml-auto max-[992px]:mr-auto max-[992px]:w-full max-w-[360px] pt-[70px] pb-[30px]">
+                  <div className="flex items-center gap-2.5">
+                    <Image
+                      src="/membershipCard.svg"
+                      width={36}
+                      height={36}
+                      className="mb-auto w-[36px] h-[36px]"
+                    />
+                    <div>
+                      <p className="text-lg font-bold">
+                        Will I have a real Lawyer?
+                      </p>
+                      <TextBlock className="text-sm">
+                        Yes, we will partner you with an official US lawyer.
+                      </TextBlock>
+                    </div>
+                  </div>
                 </div>
-                <div className="w-4/12 mr-auto max-[992px]:ml-auto max-[992px]:w-full max-w-[360px] pt-[70px] pb-[30px] px-[15px]">
-                  <p className="text-lg font-bold">What does a Patent do?</p>
-                  <TextBlock className="text-sm">
-                    Patents allow you to protect your ideas/inventions. If you
-                    own a patent you own the rights to that idea/invention for
-                    20 years. If someone decides to compete with you in the
-                    market, you have the rights to order them to cease and
-                    desist or in many cases they might have to pay you
-                    royalites.
-                  </TextBlock>
+                <div className="w-4/12 mr-auto max-[992px]:ml-auto max-[992px]:w-full max-w-[360px] pt-[70px] pb-[30px]">
+                  <div className="flex items-center gap-2.5">
+                    <Image
+                      src="/giftCard.svg"
+                      width={36}
+                      height={36}
+                      className="mb-auto w-[36px] h-[36px] -mt-1"
+                    />
+                    <div>
+                      <p className="text-lg font-bold">
+                        What does a Patent do?
+                      </p>
+                      <TextBlock className="text-sm">
+                        Patents allow you to protect your ideas/inventions. If
+                        you own a patent you own the rights to that
+                        idea/invention for 20 years. If someone decides to
+                        compete with you in the market, you have the rights to
+                        order them to cease and desist or in many cases they
+                        might have to pay you royalites.
+                      </TextBlock>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="row max-[992px]:flex-col">
                 <div className="w-4/12 ml-auto max-[992px]:mr-auto max-[992px]:w-full max-w-[360px] pt-[70px] pb-[30px] px-[15px]">
-                  <p className="text-lg font-bold">Can I cancel or back out?</p>
-                  <TextBlock className="text-sm">
-                    Yes at any time. <br /> The lawyer will ask for half of the
-                    payment upfront and you will only be charged for services
-                    that have been rendered. If part way through the process you
-                    want to back out you will be refunded proportional to the
-                    services alreadly rendered. Note you can pause your filing
-                    indefinetly with us if you need to wait for any reason.
-                  </TextBlock>
+                  <div className="flex items-center gap-2.5">
+                    <Image
+                      src="/message.svg"
+                      width={36}
+                      height={36}
+                      className="mb-auto w-[36px] h-[36px] -mt-1"
+                    />
+                    <div>
+                      <p className="text-lg font-bold">
+                        Can I cancel or back out?
+                      </p>
+                      <TextBlock className="text-sm">
+                        Yes at any time. <br /> The lawyer will ask for half of
+                        the payment upfront and you will only be charged for
+                        services that have been rendered. If part way through
+                        the process you want to back out you will be refunded
+                        proportional to the services alreadly rendered. Note you
+                        can pause your filing indefinetly with us if you need to
+                        wait for any reason.
+                      </TextBlock>
+                    </div>
+                  </div>
                 </div>
                 <div className="w-4/12 mr-auto max-[992px]:ml-auto max-w-[360px] max-[992px]:w-full pt-[70px] pb-[30px] px-[15px]">
-                  <p className="text-lg font-bold">
-                    Why should I use Introstellar?
-                  </p>
-                  <TextBlock className="text-sm	mb-[10px]">
-                    We advocate and empower you the client. In the standard
-                    patent process you are at the whims of whatever lawyer you
-                    end up with. At Introstellar we provide you with, a perfect
-                    and streamlined experience to make the application process
-                    as simple as ordering an Uber. We also provide FREE, well
-                    produced educational content to help you understand the
-                    process and also customer support for any issues. We pride
-                    ourselves on empowering clients and helping you get the best
-                    value/cost patents and IP services you can buy.
-                  </TextBlock>
+                  <div className="flex items-center gap-2.5">
+                    <Image
+                      src="/clock.png"
+                      width={36}
+                      height={36}
+                      className="mb-auto w-[36px] h-[36px]"
+                    />
+                    <div>
+                      <p className="text-lg font-bold">
+                        Why should I use Introstellar?
+                      </p>
+                      <TextBlock className="text-sm	mb-[10px]">
+                        We advocate and empower you the client. In the standard
+                        patent process you are at the whims of whatever lawyer
+                        you end up with. At Introstellar we provide you with, a
+                        perfect and streamlined experience to make the
+                        application process as simple as ordering an Uber. We
+                        also provide FREE, well produced educational content to
+                        help you understand the process and also customer
+                        support for any issues. We pride ourselves on empowering
+                        clients and helping you get the best value/cost patents
+                        and IP services you can buy.
+                      </TextBlock>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="text-center">
+            <div className="w-max mx-auto max-[770px]:w-full">
               <TextBlock>
                 What are the timelines like for the process?
-              </TextBlock>
-              <TextBlock>
+                <br />
                 Sign up and filling out the filing forms take ~5 minutes
-              </TextBlock>
-              <TextBlock>
+                <br />
                 From the moment of payment you can see your first draft within
                 48 hours
               </TextBlock>
-              <Button
-                type="primary"
-                className="py-5 px-6 mt-6"
-                onClick={() => push("https://app.introstellar-ip.com/")}
-              >
-                Sign Up
-              </Button>
+              <div className="text-center">
+                <Button
+                  type="primary"
+                  className="py-5 px-6 mt-6"
+                  onClick={() => push("https://app.introstellar-ip.com/")}
+                >
+                  Sign up
+                </Button>
+              </div>
             </div>
           </div>
         </div>

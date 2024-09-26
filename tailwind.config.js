@@ -8,18 +8,15 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        pulse: "pulse 3s infinite",
+        "pulse-glow": "pulse-glow 1.5s ease-in-out infinite",
       },
       keyframes: {
-        pulse: {
-          "0%": {
-            boxShadow: "0 0 0 0 #1677ff",
+        "pulse-glow": {
+          "0%, 100%": {
+            boxShadow: "0 0 0 rgba(22, 119, 255, 0.5)",
           },
-          "70%": {
-            boxShadow: "0 0 0 10px rgba(22, 119, 255, 0)",
-          },
-          "100%": {
-            boxShadow: "0 0 0 20px rgba(22, 119, 255, 0)",
+          "50%": {
+            boxShadow: "0 0 40px rgba(22, 119, 255, 1)",
           },
         },
       },

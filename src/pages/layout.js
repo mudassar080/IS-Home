@@ -97,7 +97,7 @@ export default ({ children }) => {
             <Menu
               triggerSubMenuAction="click"
               mode="horizontal"
-              className={`menu-desktop w-[460px] ${
+              className={`menu-desktop w-[475px] ${
                 navbarPosition ? "" : "white-text-custom"
               }`}
             >
@@ -134,11 +134,11 @@ export default ({ children }) => {
                 ))}
               </SubMenu>
               <Menu.Item
-                key="price"
+                key="pricing"
                 className="uppercase"
-                onClick={() => navigateRoute("/price")}
+                onClick={() => navigateRoute("/pricing")}
               >
-                Price
+                Pricing
               </Menu.Item>
               <Menu.Item key="sign_in">
                 <Button
@@ -181,11 +181,11 @@ export default ({ children }) => {
                 ))}
               </SubMenu>
               <Menu.Item
-                key="price"
+                key="pricing"
                 className="uppercase"
-                onClick={() => navigateRoute("/price")}
+                onClick={() => navigateRoute("/pricing")}
               >
-                Price
+                Pricing
               </Menu.Item>
               <Button
                 onClick={closeDrawer}

@@ -55,9 +55,9 @@ const Page = () => {
                 </p>
                 <br />
                 <Button
-                  onClick={() => push("https://app.introstellar-ip.com/")}
+                  onClick={() => push("/pricing")}
                   type="primary"
-                  className="text-sm font-medium py-[26px] px-9 my-[5px] uppercase duration-300 animate-pulse"
+                  className="text-sm font-medium py-[26px] px-9 my-[5px] uppercase duration-300 animate-pulse-glow"
                 >
                   File Now
                 </Button>

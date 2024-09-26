@@ -40,7 +40,7 @@ const Page = () => {
                   Let's get started
                 </h1>
                 <p className="text-white pt-5 text-[17px] font-light">
-                  To get started, you will need to choose a package or serv ice
+                  To get started, you will need to choose a package or service
                   for your needs.
                   <br /> You can opt out, add or change services dynamically for
                   now just pick your top priority.

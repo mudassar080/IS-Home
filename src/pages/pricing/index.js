@@ -255,7 +255,7 @@ const Page = () => {
                 </div>
               </div>
               <div className="row max-[992px]:flex-col">
-                <div className="w-4/12 ml-auto max-[992px]:mr-auto max-[992px]:w-full max-w-[360px] pt-[70px]">
+                <div className="w-4/12 ml-auto max-[992px]:mr-auto max-[992px]:w-full max-w-[360px] pt-[70px] mx-auto">
                   <div className="flex items-center gap-2.5">
                     <Image
                       src="/clock.png"
@@ -275,7 +275,6 @@ const Page = () => {
                     </div>
                   </div>
                 </div>
-                <div className="w-4/12 mr-auto max-[992px]:ml-auto max-w-[360px] max-[992px]:w-full pt-[70px] pb-[30px]"></div>
               </div>
             </div>
             <div className="w-max mx-auto max-[770px]:w-full">

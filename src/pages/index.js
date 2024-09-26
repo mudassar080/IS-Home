@@ -57,7 +57,7 @@ const Page = () => {
                 <Button
                   onClick={() => push("/pricing")}
                   type="primary"
-                  className="text-sm font-medium py-[26px] px-9 my-[5px] uppercase duration-300 animate-pulse-glow"
+                  className="text-sm font-medium py-[26px] px-9 my-[5px] uppercase animate-pulse-glow"
                 >
                   File Now
                 </Button>

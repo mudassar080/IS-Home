@@ -43,10 +43,8 @@ const Page = () => {
                 <p className="text-white pt-5 text-[17px] font-light">
                   To get started, you will need to choose a package or service
                   for your needs.
-                  <br /> You can opt out, add or change services dynamically for
-                  now just pick your top priority.
-                  <br /> Note prices vary depending on the complexity of the
-                  invention.
+                  <br /> You can opt out, add or change services dynamically
+                  throughout the process
                 </p>
               </div>
             </div>
@@ -61,7 +59,7 @@ const Page = () => {
                 <div className="flex mb-[50px]">
                   <Button
                     type={selectedPackage === "Patents" ? "primary" : "text"}
-                    className="py-5 px-6 uppercase rounded-full"
+                    className="py-5 px-6 uppercase rounded-full helvetica-font text-xs leading-6 font-medium"
                     onClick={() => handleManageClick("Patents")}
                   >
                     Patents
@@ -69,7 +67,7 @@ const Page = () => {
 
                   <Button
                     type={selectedPackage === "Patents +" ? "primary" : "text"}
-                    className="ml-[5px] py-5 px-6 uppercase rounded-full"
+                    className="ml-[5px] py-5 px-6 uppercase rounded-full helvetica-font text-xs leading-6 font-medium"
                     onClick={() => handleManageClick("Patents +")}
                   >
                     Patents +
@@ -82,12 +80,11 @@ const Page = () => {
                 <>
                   <PackageCard
                     title="The Book Mark Package"
-                    priceRange="650-1500"
+                    priceRange="650"
                     features={[
                       "Provisional Patent Application",
-                      "1 Year of Protection",
-                      "After 1 year you have to file another Provisional or a Non Provisional",
-                      "Doesn't allow you to enforce your patent.",
+                      "After 1 Year You have to File Another Provisional or a Non Provisional",
+                      "Doesn't Allow You to Enforce Your Patent.",
                     ]}
                     selected=""
                     onClick={() =>
@@ -96,22 +93,22 @@ const Page = () => {
                   />
                   <PackageCard
                     title="The Gold Standard Utility Package"
-                    priceRange="1250-2500"
+                    priceRange="1250"
                     features={[
                       "Non Provisional Patent Application",
                       "20 Years of Protection",
-                      "Grants the right to enforce the patent",
+                      "Grants the Right to Enforce the Patent",
                     ]}
                     selected={"The Gold Standard Utility Package"}
                     onClick={() => null}
                   />
                   <PackageCard
                     title="The Gold Standard Design Package"
-                    priceRange="700-1400"
+                    priceRange="700"
                     features={[
                       "Non Provisional Design Patent Application",
                       "20 Years of Protection For Visual Designs",
-                      "Grants the right to enforce the patent",
+                      "Grants the Right to Enforce the Patent",
                     ]}
                     selected=""
                     onClick={() => null}
@@ -123,17 +120,17 @@ const Page = () => {
                 <>
                   <PackageCard
                     title="Search Package"
-                    priceRange="300-400"
+                    priceRange="300"
                     features={["Full Patent Search and Report"]}
                     selected=""
                     onClick={() => null}
                   />
                   <PackageCard
                     title="Trademarks"
-                    priceRange="300-500"
+                    priceRange="300"
                     features={[
                       "Nationwide Protection Begins Upon Registration",
-                      "Create an account and contact us for more details",
+                      "Create An Account And Contact Us For More Details",
                     ]}
                     selected={"Trademarks"}
                     onClick={() => null}
@@ -141,9 +138,9 @@ const Page = () => {
                   <PackageCard
                     title="Litigation"
                     features={[
-                      "Enforce your patent",
-                      "Stop others from using your IP",
-                      "Create an account and contact us for more details on prices",
+                      "Enforce Your Patent",
+                      "Stop Others From Using Your IP",
+                      "Create An Account And Contact Us For More Details On Prices",
                     ]}
                     selected=""
                     onClick={() => null}
@@ -153,6 +150,13 @@ const Page = () => {
             </div>
 
             <div className="py-20">
+              <div className="text-center">
+                <TextBlock className="text-sm">
+                  The prices above are starting prices for very basic
+                  inventions. Prices vary depending on the complexity of the
+                  invention.
+                </TextBlock>
+              </div>
               <div className="text-center">
                 <h3 className="py-[30px] text-[25px] font-bold">
                   Frequently Asked Questions
@@ -190,12 +194,15 @@ const Page = () => {
                         What does a Patent do?
                       </p>
                       <TextBlock className="text-sm">
-                        Patents allow you to protect your ideas/inventions. If
-                        you own a patent you own the rights to that
-                        idea/invention for 20 years. If someone decides to
-                        compete with you in the market, you have the rights to
-                        order them to cease and desist or in many cases they
-                        might have to pay you royalites.
+                        Patents protect your innovative ideas and inventions,
+                        granting you exclusive rights for 20 years from the
+                        filing date. If a competitor tries to enter the market
+                        with an infringing product or service, you can take
+                        legal action to protect your interests. This may involve
+                        issuing a cease and desist order or negotiating a
+                        licensing agreement for royalty payments. By securing a
+                        patent, you safeguard your competitive edge and prevent
+                        unauthorized use of your intellectual property.
                       </TextBlock>
                     </div>
                   </div>
@@ -246,9 +253,7 @@ const Page = () => {
                         application process as simple as ordering an Uber. We
                         also provide FREE, well produced educational content to
                         help you understand the process and also customer
-                        support for any issues. We pride ourselves on empowering
-                        clients and helping you get the best value/cost patents
-                        and IP services you can buy.
+                        support for any issues.
                       </TextBlock>
                     </div>
                   </div>
@@ -268,9 +273,9 @@ const Page = () => {
                         What are the timelines like for the process?
                       </p>
                       <TextBlock className="text-sm">
-                        Sign up and filling out the filing forms take ~5 minutes
-                        From the moment of payment you can see your first draft
-                        within 48 hours
+                        Sign up and filling out the filing forms ***takes*** ~5
+                        minutes From the moment of payment you can see your
+                        first draft within 48 hours
                       </TextBlock>
                     </div>
                   </div>
@@ -316,13 +321,13 @@ const PackageCard = ({ title, priceRange, features, selected, onClick }) => {
       >
         <div
           className={clsx(
-            "pt-[15px] px-[15px] min-h-[457px!important] max-[992px]:min-h-[100%!important]",
+            "pt-[15px] px-[15px] min-h-[340px!important] max-[992px]:min-h-[100%!important]",
             {
               "text-white": isSelected,
             }
           )}
         >
-          <p className="uppercase font-bold">{title}</p>
+          <p className="uppercase font-medium text-xs leading-6">{title}</p>
           <h1
             className={clsx(
               "mt-[30px] mb-3  max-[1200px]:text-[32px] text-[46px] font-bold",
@@ -343,9 +348,12 @@ const PackageCard = ({ title, priceRange, features, selected, onClick }) => {
             {features.map((feature, index) => (
               <li
                 key={index}
-                className={clsx("py-3 text-center border-b text-[#999]", {
-                  "text-white border-[white!important]": isSelected,
-                })}
+                className={clsx(
+                  "py-3 text-center border-b-[0.3px] text-[#999]",
+                  {
+                    "text-white border-[white!important]": isSelected,
+                  }
+                )}
               >
                 {feature}
               </li>
@@ -355,7 +363,7 @@ const PackageCard = ({ title, priceRange, features, selected, onClick }) => {
         <Button
           type="primary"
           className={clsx(
-            "py-5 px-6 uppercase rounded-full mb-[15px] mt-[15px] max-[992px]:mt-8",
+            "py-5 px-6 uppercase rounded-full mb-[15px] mt-[15px] max-[992px]:mt-8 text-sm leading-[22.857px]",
             {
               "bg-[white!important] text-[#999] hover:text-[#999!important]":
                 isSelected,

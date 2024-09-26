@@ -56,7 +56,6 @@ export default ({ children }) => {
     { key: "provisional-patents", label: "Provisional Patents" },
     { key: "design-patents", label: "Design Patents" },
     { key: "trademarks", label: "Trademarks" },
-    { key: "price", label: "Price" },
   ];
 
   if (noLayoutPaths.includes(pathname)) return <>{children}</>;
@@ -98,7 +97,7 @@ export default ({ children }) => {
             <Menu
               triggerSubMenuAction="click"
               mode="horizontal"
-              className={`menu-desktop w-[390px] ${
+              className={`menu-desktop w-[460px] ${
                 navbarPosition ? "" : "white-text-custom"
               }`}
             >
@@ -134,6 +133,13 @@ export default ({ children }) => {
                   </Menu.Item>
                 ))}
               </SubMenu>
+              <Menu.Item
+                key="price"
+                className="uppercase"
+                onClick={() => navigateRoute("/price")}
+              >
+                Price
+              </Menu.Item>
               <Menu.Item key="sign_in">
                 <Button
                   onClick={() => push("https://app.introstellar-ip.com/")}
@@ -174,6 +180,13 @@ export default ({ children }) => {
                   </Menu.Item>
                 ))}
               </SubMenu>
+              <Menu.Item
+                key="price"
+                className="uppercase"
+                onClick={() => navigateRoute("/price")}
+              >
+                Price
+              </Menu.Item>
               <Button
                 onClick={closeDrawer}
                 className="rounded-full uppercase ml-5 mt-2"

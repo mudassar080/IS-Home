@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import Button from "../../../../components/Button";
-import { handleScroll, TextBlock } from "../../../../utils";
 import { useRouter } from "next/router";
 import clsx from "clsx";
+import Button from "../../../components/Button";
+import { handleScroll, TextBlock } from "../../../utils";
 
 const Page = () => {
   const [selectedPackage, setSelectedPackage] = useState("Patents");

@@ -13,12 +13,12 @@ const lawyers = [
   {
     name: "Black Mesa",
     logo: "/blacMesaLogo.png",
-    url: "https://makridakispllc.com",
+    url: "https://www.blackmesalaw.com/",
   },
   {
     name: "Greg Sachs and Associates",
     logo: "/vps.png",
-    url: "https://makridakispllc.com",
+    url: "https://valetpatentservices.com/",
   },
 ];
 

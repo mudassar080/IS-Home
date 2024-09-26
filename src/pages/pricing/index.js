@@ -202,10 +202,10 @@ const Page = () => {
                 </div>
               </div>
               <div className="row max-[992px]:flex-col">
-                <div className="w-4/12 ml-auto max-[992px]:mr-auto max-[992px]:w-full max-w-[360px] pt-[70px] pb-[30px] px-[15px]">
+                <div className="w-4/12 ml-auto max-[992px]:mr-auto max-[992px]:w-full max-w-[360px] pt-[70px] pb-[30px]">
                   <div className="flex items-center gap-2.5">
                     <Image
-                      src="/message.svg"
+                      src="/money.svg"
                       width={36}
                       height={36}
                       className="mb-auto w-[36px] h-[36px] -mt-1"
@@ -226,10 +226,10 @@ const Page = () => {
                     </div>
                   </div>
                 </div>
-                <div className="w-4/12 mr-auto max-[992px]:ml-auto max-w-[360px] max-[992px]:w-full pt-[70px] pb-[30px] px-[15px]">
+                <div className="w-4/12 mr-auto max-[992px]:ml-auto max-w-[360px] max-[992px]:w-full pt-[70px] pb-[30px]">
                   <div className="flex items-center gap-2.5">
                     <Image
-                      src="/clock.png"
+                      src="/message.svg"
                       width={36}
                       height={36}
                       className="mb-auto w-[36px] h-[36px]"
@@ -254,20 +254,35 @@ const Page = () => {
                   </div>
                 </div>
               </div>
+              <div className="row max-[992px]:flex-col">
+                <div className="w-4/12 ml-auto max-[992px]:mr-auto max-[992px]:w-full max-w-[360px] pt-[70px]">
+                  <div className="flex items-center gap-2.5">
+                    <Image
+                      src="/clock.png"
+                      width={36}
+                      height={36}
+                      className="mb-auto w-[36px] h-[36px]"
+                    />
+                    <div>
+                      <p className="text-lg font-bold">
+                        What are the timelines like for the process?
+                      </p>
+                      <TextBlock className="text-sm">
+                        Sign up and filling out the filing forms take ~5 minutes
+                        From the moment of payment you can see your first draft
+                        within 48 hours
+                      </TextBlock>
+                    </div>
+                  </div>
+                </div>
+                <div className="w-4/12 mr-auto max-[992px]:ml-auto max-w-[360px] max-[992px]:w-full pt-[70px] pb-[30px]"></div>
+              </div>
             </div>
             <div className="w-max mx-auto max-[770px]:w-full">
-              <TextBlock>
-                What are the timelines like for the process?
-                <br />
-                Sign up and filling out the filing forms take ~5 minutes
-                <br />
-                From the moment of payment you can see your first draft within
-                48 hours
-              </TextBlock>
               <div className="text-center">
                 <Button
                   type="primary"
-                  className="py-5 px-6 mt-6"
+                  className="py-5 px-6"
                   onClick={() => push("https://app.introstellar-ip.com/")}
                 >
                   Sign up

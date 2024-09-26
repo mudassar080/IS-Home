@@ -29,13 +29,6 @@ const Page = () => {
                 <h1 className="text-[53px] pb-5 font-bold leading-[3.5rem]">
                   Design Patents
                 </h1>
-                <Button
-                  type="primary"
-                  className="py-[26px] px-9 my-[5px] uppercase"
-                  onClick={() => push("https://app.introstellar-ip.com/")}
-                >
-                  Start a Design Patent Filing Now
-                </Button>
               </div>
             </div>
           </div>
@@ -126,6 +119,14 @@ const Page = () => {
                       your design patent rights when necessary
                     </li>
                   </ul>
+                  <br />
+                  <Button
+                    type="primary"
+                    className="py-[26px] px-9 my-[5px] uppercase"
+                    onClick={() => push("https://app.introstellar-ip.com/")}
+                  >
+                    Start a Design Patent Filing Now
+                  </Button>
                 </div>
               </div>
             </div>

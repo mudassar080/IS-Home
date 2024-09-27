@@ -149,8 +149,8 @@ const Page = () => {
               )}
             </div>
 
-            <div className="py-20">
-              <div className="text-center">
+            <div>
+              <div className="text-center pt-[30px]">
                 <TextBlock className="text-sm">
                   The prices above are starting prices for very basic
                   inventions. Prices vary depending on the complexity of the
@@ -273,7 +273,7 @@ const Page = () => {
                         What are the timelines like for the process?
                       </p>
                       <TextBlock className="text-sm">
-                        Sign up and filling out the filing forms ***takes*** ~5
+                        Sign up and filling out the filing forms takes ~5
                         minutes From the moment of payment you can see your
                         first draft within 48 hours
                       </TextBlock>
@@ -282,7 +282,7 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div className="w-max mx-auto max-[770px]:w-full">
+            <div className="w-max mx-auto max-[770px]:w-full mt-5">
               <div className="text-center">
                 <Button
                   type="primary"
@@ -348,12 +348,10 @@ const PackageCard = ({ title, priceRange, features, selected, onClick }) => {
             {features.map((feature, index) => (
               <li
                 key={index}
-                className={clsx(
-                  "py-3 text-center border-b-[0.3px] text-[#999]",
-                  {
-                    "text-white border-[white!important]": isSelected,
-                  }
-                )}
+                className={clsx("py-3 text-center text-[#999]", {
+                  "text-white border-[#ffffff4d!important]": isSelected,
+                  "border-b-[0.3px]": index !== features?.length - 1,
+                })}
               >
                 {feature}
               </li>
@@ -363,7 +361,7 @@ const PackageCard = ({ title, priceRange, features, selected, onClick }) => {
         <Button
           type="primary"
           className={clsx(
-            "py-5 px-6 uppercase rounded-full mb-[15px] mt-[15px] max-[992px]:mt-8 text-sm leading-[22.857px]",
+            "py-5 px-6 uppercase rounded-full mb-[15px] mt-[15px] max-[992px]:mt-8 helvetica-font text-xs leading-6 font-medium",
             {
               "bg-[white!important] text-[#999] hover:text-[#999!important]":
                 isSelected,

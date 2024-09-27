@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        "pulse-glow": "pulse-glow 2.5s ease-in-out infinite",
+        "pulse-glow": "pulse-glow 3s ease-in-out infinite",
       },
       keyframes: {
         "pulse-glow": {

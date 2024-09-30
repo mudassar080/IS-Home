@@ -87,9 +87,7 @@ const Page = () => {
                       "Doesn't Allow You to Enforce Your Patent.",
                     ]}
                     selected=""
-                    onClick={() =>
-                      handleGetStartedClick("The Book Mark Package")
-                    }
+                    onClick={() => push("https://app.introstellar-ip.com/signup")}
                   />
                   <PackageCard
                     title="The Gold Standard Utility Package"
@@ -100,7 +98,7 @@ const Page = () => {
                       "Grants the Right to Enforce the Patent",
                     ]}
                     selected={"The Gold Standard Utility Package"}
-                    onClick={() => null}
+                    onClick={() => push("https://app.introstellar-ip.com/signup")}
                   />
                   <PackageCard
                     title="The Gold Standard Design Package"
@@ -111,7 +109,7 @@ const Page = () => {
                       "Grants the Right to Enforce the Patent",
                     ]}
                     selected=""
-                    onClick={() => null}
+                    onClick={() => push("https://app.introstellar-ip.com/signup")}
                   />
                 </>
               )}
@@ -123,7 +121,7 @@ const Page = () => {
                     priceRange="300"
                     features={["Full Patent Search and Report"]}
                     selected=""
-                    onClick={() => null}
+                    onClick={() => push("https://app.introstellar-ip.com/signup")}
                   />
                   <PackageCard
                     title="Trademarks"
@@ -133,7 +131,7 @@ const Page = () => {
                       "Create An Account And Contact Us For More Details",
                     ]}
                     selected={"Trademarks"}
-                    onClick={() => null}
+                    onClick={() => push("https://app.introstellar-ip.com/signup")}
                   />
                   <PackageCard
                     title="Litigation"
@@ -143,7 +141,7 @@ const Page = () => {
                       "Create An Account And Contact Us For More Details On Prices",
                     ]}
                     selected=""
-                    onClick={() => null}
+                    onClick={() => push("https://app.introstellar-ip.com/signup")}
                   />
                 </>
               )}
@@ -363,7 +361,7 @@ const PackageCard = ({ title, priceRange, features, selected, onClick }) => {
           className={clsx(
             "py-5 px-6 uppercase rounded-full mb-[15px] mt-[15px] max-[992px]:mt-8 helvetica-font text-xs leading-6 font-medium",
             {
-              "bg-[white!important] text-[#999] hover:text-[#999!important]":
+              "bg-[white!important] text-[#999] hover:text-[#999!important] hover:shadow-lg hover:opacity-[90%]":
                 isSelected,
             }
           )}

@@ -59,7 +59,13 @@ const Page = () => {
                 <div className="flex mb-[50px]">
                   <Button
                     type={selectedPackage === "Patents" ? "primary" : "text"}
-                    className="py-5 px-6 uppercase rounded-full helvetica-font text-xs leading-6 font-medium"
+                    className={clsx(
+                      "py-5 px-6 uppercase rounded-full helvetica-font text-xs leading-6 font-medium",
+                      {
+                        "shadow-[0_5px_20px_0_rgba(22,119,255,0.2),_0_13px_24px_-11px_rgba(22,119,255,0.6)]":
+                          selectedPackage === "Patents",
+                      }
+                    )}
                     onClick={() => handleManageClick("Patents")}
                   >
                     Patents
@@ -67,7 +73,13 @@ const Page = () => {
 
                   <Button
                     type={selectedPackage === "Patents +" ? "primary" : "text"}
-                    className="ml-[5px] py-5 px-6 uppercase rounded-full helvetica-font text-xs leading-6 font-medium"
+                    className={clsx(
+                      "ml-[5px] py-5 px-6 uppercase rounded-full helvetica-font text-xs leading-6 font-medium",
+                      {
+                        "shadow-[0_5px_20px_0_rgba(22,119,255,0.2),_0_13px_24px_-11px_rgba(22,119,255,0.6)]":
+                          selectedPackage === "Patents +",
+                      }
+                    )}
                     onClick={() => handleManageClick("Patents +")}
                   >
                     Patents +
@@ -87,29 +99,41 @@ const Page = () => {
                       "Doesn't Allow You to Enforce Your Patent.",
                     ]}
                     selected=""
-                    onClick={() => push("https://app.introstellar-ip.com/signup")}
+                    onClick={() =>
+                      push("https://app.introstellar-ip.com/signup")
+                    }
                   />
                   <PackageCard
                     title="The Gold Standard Utility Package"
                     priceRange="1250"
                     features={[
                       "Non Provisional Patent Application",
-                      "20 Years of Protection",
+                      <span>
+                        <b className="font-bold">20</b> Years of Protection
+                      </span>,
                       "Grants the Right to Enforce the Patent",
                     ]}
                     selected={"The Gold Standard Utility Package"}
-                    onClick={() => push("https://app.introstellar-ip.com/signup")}
+                    onClick={() =>
+                      push("https://app.introstellar-ip.com/signup")
+                    }
                   />
                   <PackageCard
                     title="The Gold Standard Design Package"
                     priceRange="700"
                     features={[
                       "Non Provisional Design Patent Application",
-                      "20 Years of Protection For Visual Designs",
+                      <span>
+                        <b className="text-[#000] font-bold">20</b> Years of
+                        Protection For Visual Designs
+                      </span>,
+                      ,
                       "Grants the Right to Enforce the Patent",
                     ]}
                     selected=""
-                    onClick={() => push("https://app.introstellar-ip.com/signup")}
+                    onClick={() =>
+                      push("https://app.introstellar-ip.com/signup")
+                    }
                   />
                 </>
               )}
@@ -121,27 +145,33 @@ const Page = () => {
                     priceRange="300"
                     features={["Full Patent Search and Report"]}
                     selected=""
-                    onClick={() => push("https://app.introstellar-ip.com/signup")}
+                    onClick={() =>
+                      push("https://app.introstellar-ip.com/signup")
+                    }
                   />
                   <PackageCard
                     title="Trademarks"
                     priceRange="300"
                     features={[
                       "Nationwide Protection Begins Upon Registration",
-                      "Create An Account And Contact Us For More Details",
+                      "Create an Account and Contact Us for More Details on Prices",
                     ]}
                     selected={"Trademarks"}
-                    onClick={() => push("https://app.introstellar-ip.com/signup")}
+                    onClick={() =>
+                      push("https://app.introstellar-ip.com/signup")
+                    }
                   />
                   <PackageCard
                     title="Litigation"
                     features={[
                       "Enforce Your Patent",
                       "Stop Others From Using Your IP",
-                      "Create An Account And Contact Us For More Details On Prices",
+                      "Create an Account and Contact Us for More Details on Prices",
                     ]}
                     selected=""
-                    onClick={() => push("https://app.introstellar-ip.com/signup")}
+                    onClick={() =>
+                      push("https://app.introstellar-ip.com/signup")
+                    }
                   />
                 </>
               )}
@@ -258,13 +288,13 @@ const Page = () => {
                 </div>
               </div>
               <div className="row max-[992px]:flex-col">
-                <div className="w-4/12 ml-auto max-[992px]:mr-auto max-[992px]:w-full max-w-[360px] pt-[70px] mx-auto">
+                <div className="w-4/12 ml-auto max-[992px]:mr-auto max-[992px]:w-full max-w-[360px] pt-[70px] pb-[30px]">
                   <div className="flex items-center gap-2.5">
                     <Image
                       src="/clock.png"
                       width={36}
                       height={36}
-                      className="mb-auto w-[36px] h-[36px]"
+                      className="mb-auto w-[36px] h-[36px] -mt-1"
                     />
                     <div>
                       <p className="text-lg font-bold">
@@ -278,9 +308,10 @@ const Page = () => {
                     </div>
                   </div>
                 </div>
+                <div className="w-4/12 mr-auto max-[992px]:ml-auto max-w-[360px] max-[992px]:w-full pt-[70px] pb-[30px]"></div>
               </div>
             </div>
-            <div className="w-max mx-auto max-[770px]:w-full mt-5">
+            <div className="w-max mx-auto max-[770px]:w-full mt-10">
               <div className="text-center">
                 <Button
                   type="primary"
@@ -337,19 +368,19 @@ const PackageCard = ({ title, priceRange, features, selected, onClick }) => {
             <small className="relative max-[1200px]:text-[20px] text-[26px] max-[1200px]:-top-[8px] -top-[19px] max-[1200px]:-right-[8px] max-[992px]:-right-[8px] -right-[12px] font-normal">
               {!!priceRange ? "$" : ""}
             </small>{" "}
-            {!!priceRange ? formatPrice(priceRange) : ""}
-            <small className="relative text-[18px] font-normal	">
-              {!!priceRange ? "/year" : ""}
-            </small>{" "}
+            {!!priceRange ? formatPrice(priceRange) : " - "}
           </h1>
           <ul>
             {features.map((feature, index) => (
               <li
                 key={index}
-                className={clsx("py-3 text-center text-[#999]", {
-                  "text-white border-[#ffffff4d!important]": isSelected,
-                  "border-b-[0.3px]": index !== features?.length - 1,
-                })}
+                className={clsx(
+                  "py-3 text-center text-[#999] helvetica-font font-light text-sm leading-[1.5em]",
+                  {
+                    "text-white border-[#ffffff4d!important]": isSelected,
+                    "border-b-[0.3px]": index !== features?.length - 1,
+                  }
+                )}
               >
                 {feature}
               </li>
@@ -359,7 +390,7 @@ const PackageCard = ({ title, priceRange, features, selected, onClick }) => {
         <Button
           type="primary"
           className={clsx(
-            "py-5 px-6 uppercase rounded-full mb-[15px] mt-[15px] max-[992px]:mt-8 helvetica-font text-xs leading-6 font-medium",
+            "py-5 px-6 uppercase rounded-full mb-[15px] mt-[15px] max-[992px]:mt-8 helvetica-font text-xs leading-6 font-medium shadow-[0_2px_2px_0_rgba(22,119,255,0.14),_0_3px_1px_-2px_rgba(22,119,255,0.2),_0_1px_5px_0_rgba(22,119,255,0.12)]",
             {
               "bg-[white!important] text-[#999] hover:text-[#999!important] hover:shadow-lg hover:opacity-[90%]":
                 isSelected,

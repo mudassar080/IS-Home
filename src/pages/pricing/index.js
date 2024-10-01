@@ -62,7 +62,7 @@ const Page = () => {
                     className={clsx(
                       "py-5 px-6 uppercase rounded-full helvetica-font text-xs leading-6 font-medium",
                       {
-                        "shadow-[0_5px_20px_0_rgba(22,119,255,0.2),_0_13px_24px_-11px_rgba(22,119,255,0.6)]":
+                        "shadow-[0_5px_20px_0_rgba(22,119,255,0.2),_0_13px_24px_-11px_rgba(22,119,255,0.6)] hover:bg-[#1677ff!important]":
                           selectedPackage === "Patents",
                       }
                     )}
@@ -76,7 +76,7 @@ const Page = () => {
                     className={clsx(
                       "ml-[5px] py-5 px-6 uppercase rounded-full helvetica-font text-xs leading-6 font-medium",
                       {
-                        "shadow-[0_5px_20px_0_rgba(22,119,255,0.2),_0_13px_24px_-11px_rgba(22,119,255,0.6)]":
+                        "shadow-[0_5px_20px_0_rgba(22,119,255,0.2),_0_13px_24px_-11px_rgba(22,119,255,0.6)] hover:bg-[#1677ff!important]":
                           selectedPackage === "Patents +",
                       }
                     )}
@@ -359,7 +359,7 @@ const PackageCard = ({ title, priceRange, features, selected, onClick }) => {
           <p className="uppercase font-medium text-xs leading-6">{title}</p>
           <h1
             className={clsx(
-              "mt-[30px] mb-3  max-[1200px]:text-[32px] text-[46px] font-bold",
+              "mt-[30px] mb-3  max-[1200px]:text-[32px] text-[46px] font-bold -ml-[12px] max-[1200px]:-ml-[8px]",
               {
                 "h-[75px!important]": !!!priceRange,
               }
@@ -390,9 +390,9 @@ const PackageCard = ({ title, priceRange, features, selected, onClick }) => {
         <Button
           type="primary"
           className={clsx(
-            "py-5 px-6 uppercase rounded-full mb-[15px] mt-[15px] max-[992px]:mt-8 helvetica-font text-xs leading-6 font-medium shadow-[0_2px_2px_0_rgba(22,119,255,0.14),_0_3px_1px_-2px_rgba(22,119,255,0.2),_0_1px_5px_0_rgba(22,119,255,0.12)]",
+            "py-5 px-6 uppercase rounded-full mb-[15px] mt-[15px] max-[992px]:mt-8 helvetica-font text-xs leading-6 font-medium shadow-[0_2px_2px_0_rgba(22,119,255,0.14),_0_3px_1px_-2px_rgba(22,119,255,0.2),_0_1px_5px_0_rgba(22,119,255,0.12)] hover:shadow-[0_5px_20px_0_rgba(22,119,255,0.2),_0_13px_24px_-11px_rgba(22,119,255,0.6)] hover:bg-[#1677ff!important]",
             {
-              "bg-[white!important] text-[#999] hover:text-[#999!important] hover:shadow-lg hover:opacity-[90%]":
+              "bg-[white!important] text-[#999] hover:text-[#999!important] hover:shadow-[0_14px_26px_-12px_rgba(153,153,153,.42),0_4px_23px_0_rgba(0,0,0,.12),0_8px_10px_-5px_rgba(153,153,153,.2)] hover:bg-[white!important]":
                 isSelected,
             }
           )}

@@ -315,7 +315,7 @@ const Page = () => {
               <div className="text-center">
                 <Button
                   type="primary"
-                  className="py-5 px-6"
+                  className="py-5 px-6 hover:shadow-[0_5px_20px_0_rgba(22,119,255,0.2),_0_13px_24px_-11px_rgba(22,119,255,0.6)] hover:bg-[#1677ff!important]"
                   onClick={() => push("https://app.introstellar-ip.com/")}
                 >
                   Sign up

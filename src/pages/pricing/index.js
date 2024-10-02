@@ -320,7 +320,7 @@ const Page = () => {
                 <Button
                   type="primary"
                   className="py-5 px-6 hover:shadow-[0_5px_20px_0_rgba(22,119,255,0.2),_0_13px_24px_-11px_rgba(22,119,255,0.6)] hover:bg-[#1677ff!important]"
-                  onClick={() => push(process.env.NEXT_PUBLIC_BASE_URL)}
+                  onClick={() => push(`${process.env.NEXT_PUBLIC_BASE_URL}/signup`)}
                 >
                   Sign up
                 </Button>

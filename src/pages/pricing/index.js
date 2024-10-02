@@ -183,11 +183,11 @@ const Page = () => {
 
             <div>
               <div className="text-center pt-[30px]">
-                <TextBlock className="text-sm">
+                <p className="text-sm text-[#999] pt-5 text-sm font-light">
                   The prices above are starting prices for very basic
                   inventions. Prices vary depending on the complexity of the
                   invention.
-                </TextBlock>
+                </p>
               </div>
               <div className="text-center">
                 <h3 className="py-[30px] text-[25px] font-bold">
@@ -195,7 +195,7 @@ const Page = () => {
                 </h3>
               </div>
               <div className="flex flex-wrap max-[992px]:flex-col pt-[70px]">
-                <div className="w-1/2 pr-[10px] max-[992px]:ml-auto max-[992px]:mr-auto max-[992px]:pr-[0px]">
+                <div className="w-1/2 max-[992px]:w-full pr-[10px] max-[992px]:ml-auto max-[992px]:mr-auto max-[992px]:pr-[0px]">
                   <div className="ml-auto max-[992px]:mr-auto max-[992px]:w-full max-w-[360px] pb-[30px]">
                     <div className="flex items-center gap-2.5">
                       <Image
@@ -208,9 +208,9 @@ const Page = () => {
                         <p className="text-lg font-bold">
                           Will I have a real Lawyer?
                         </p>
-                        <TextBlock className="text-sm">
+                        <p className="text-sm text-[#999] pt-5 font-light leading-6">
                           Yes, we will partner you with an official US lawyer.
-                        </TextBlock>
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -226,7 +226,7 @@ const Page = () => {
                         <p className="text-lg font-bold">
                           Can I cancel or back out?
                         </p>
-                        <TextBlock className="text-sm">
+                        <p className="text-sm text-[#999] pt-5 font-light leading-6">
                           Yes at any time. <br /> The lawyer will ask for half
                           of the payment upfront and you will only be charged
                           for services that have been rendered. If part way
@@ -234,7 +234,7 @@ const Page = () => {
                           refunded proportional to the services alreadly
                           rendered. Note you can pause your filing indefinetly
                           with us if you need to wait for any reason.
-                        </TextBlock>
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -250,16 +250,16 @@ const Page = () => {
                         <p className="text-lg font-bold">
                           What are the timelines like for the process?
                         </p>
-                        <TextBlock className="text-sm">
+                        <p className="text-sm text-[#999] pt-5 font-light leading-6">
                           Sign up and filling out the filing forms takes ~5
                           minutes From the moment of payment you can see your
                           first draft within 48 hours
-                        </TextBlock>
+                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="w-1/2 pl-[10px] max-[992px]:ml-auto max-[992px]:mr-auto max-[992px]:pl-[0px]">
+                <div className="w-1/2 max-[992px]:w-full pl-[10px] max-[992px]:ml-auto max-[992px]:mr-auto max-[992px]:pl-[0px]">
                   <div className="mr-auto max-[992px]:ml-auto max-[992px]:w-full max-w-[360px] pb-[30px]">
                     <div className="flex items-center gap-2.5">
                       <Image
@@ -272,7 +272,7 @@ const Page = () => {
                         <p className="text-lg font-bold">
                           What does a Patent do?
                         </p>
-                        <TextBlock className="text-sm">
+                        <p className="text-sm text-[#999] pt-5 font-light leading-6">
                           Patents protect your innovative ideas and inventions,
                           granting you exclusive rights for 20 years from the
                           filing date. If a competitor tries to enter the market
@@ -283,7 +283,7 @@ const Page = () => {
                           payments. By securing a patent, you safeguard your
                           competitive edge and prevent unauthorized use of your
                           intellectual property.
-                        </TextBlock>
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -299,7 +299,7 @@ const Page = () => {
                         <p className="text-lg font-bold">
                           Why should I use Introstellar?
                         </p>
-                        <TextBlock className="text-sm	mb-[10px]">
+                        <p className="text-sm	mb-[10px] text-[#999] pt-5 font-light leading-6">
                           We advocate and empower you the client. In the
                           standard patent process you are at the whims of
                           whatever lawyer you end up with. At Introstellar we
@@ -308,7 +308,7 @@ const Page = () => {
                           an Uber. We also provide FREE, well produced
                           educational content to help you understand the process
                           and also customer support for any issues.
-                        </TextBlock>
+                        </p>
                       </div>
                     </div>
                   </div>

@@ -16,6 +16,29 @@ export default ({ children }) => {
   const [visible, setVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
+  useEffect(() => {
+    const gtagScript = document.createElement("script");
+    gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-K83BK4J4MT";
+    gtagScript.async = true;
+    document.body.appendChild(gtagScript);
+
+    const gtagInitScript = document.createElement("script");
+    gtagInitScript.innerHTML = `
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        window.dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-K83BK4J4MT');
+    `;
+    document.body.appendChild(gtagInitScript);
+
+    return () => {
+      document.body.removeChild(gtagScript);
+      document.body.removeChild(gtagInitScript);
+    };
+  }, [pathname]);
+
   const showDrawer = () => setVisible(true);
 
   const closeDrawer = () => setVisible(false);
@@ -142,7 +165,7 @@ export default ({ children }) => {
               </Menu.Item>
               <Menu.Item key="sign_in">
                 <Button
-                  onClick={() => push("https://app.introstellar-ip.com/")}
+                  onClick={() => push(process.env.NEXT_PUBLIC_BASE_URL)}
                   type={navbarPosition ? "primary" : ""}
                   className="rounded-full uppercase"
                 >
@@ -188,7 +211,10 @@ export default ({ children }) => {
                 Pricing
               </Menu.Item>
               <Button
-                onClick={closeDrawer}
+                onClick={() => {
+                  closeDrawer();
+                  push(process.env.NEXT_PUBLIC_BASE_URL);
+                }}
                 className="rounded-full uppercase ml-5 mt-2"
               >
                 Sign In

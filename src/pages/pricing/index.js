@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import clsx from "clsx";
 import Button from "../../../components/Button";
-import { handleScroll, TextBlock } from "../../../utils";
+import { handleScroll } from "../../../utils";
 import Image from "next/image";
 
 const Page = () => {
@@ -104,7 +104,7 @@ const Page = () => {
                     ]}
                     selected=""
                     onClick={() =>
-                      push("https://app.introstellar-ip.com/signup")
+                      push(`${process.env.NEXT_PUBLIC_BASE_URL}/register`)
                     }
                   />
                   <PackageCard
@@ -119,7 +119,7 @@ const Page = () => {
                     ]}
                     selected={"The Gold Standard Utility Package"}
                     onClick={() =>
-                      push("https://app.introstellar-ip.com/signup")
+                      push(`${process.env.NEXT_PUBLIC_BASE_URL}/register`)
                     }
                   />
                   <PackageCard
@@ -136,7 +136,7 @@ const Page = () => {
                     ]}
                     selected=""
                     onClick={() =>
-                      push("https://app.introstellar-ip.com/signup")
+                      push(`${process.env.NEXT_PUBLIC_BASE_URL}/register`)
                     }
                   />
                 </>
@@ -150,7 +150,7 @@ const Page = () => {
                     features={["Full Patent Search and Report"]}
                     selected=""
                     onClick={() =>
-                      push("https://app.introstellar-ip.com/signup")
+                      push(`${process.env.NEXT_PUBLIC_BASE_URL}/register`)
                     }
                   />
                   <PackageCard
@@ -162,7 +162,7 @@ const Page = () => {
                     ]}
                     selected={"Trademarks"}
                     onClick={() =>
-                      push("https://app.introstellar-ip.com/signup")
+                      push(`${process.env.NEXT_PUBLIC_BASE_URL}/register`)
                     }
                   />
                   <PackageCard
@@ -174,7 +174,7 @@ const Page = () => {
                     ]}
                     selected=""
                     onClick={() =>
-                      push("https://app.introstellar-ip.com/signup")
+                      push(`${process.env.NEXT_PUBLIC_BASE_URL}/register`)
                     }
                   />
                 </>
@@ -320,7 +320,7 @@ const Page = () => {
                 <Button
                   type="primary"
                   className="py-5 px-6 hover:shadow-[0_5px_20px_0_rgba(22,119,255,0.2),_0_13px_24px_-11px_rgba(22,119,255,0.6)] hover:bg-[#1677ff!important]"
-                  onClick={() => push("https://app.introstellar-ip.com/")}
+                  onClick={() => push(process.env.NEXT_PUBLIC_BASE_URL)}
                 >
                   Sign up
                 </Button>

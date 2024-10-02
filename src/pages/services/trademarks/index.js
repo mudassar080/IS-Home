@@ -125,7 +125,7 @@ const Page = () => {
                 <Button
                   type="primary"
                   className="py-[26px] px-9 my-[5px] uppercase"
-                  onClick={() => push("https://app.introstellar-ip.com/")}
+                  onClick={() => push(process.env.NEXT_PUBLIC_BASE_URL)}
                 >
                   Start a Trademark Filing Now
                 </Button>

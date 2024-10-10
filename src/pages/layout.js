@@ -184,15 +184,15 @@ export default ({ children }) => {
             className="menu-mobile"
           >
             <Menu mode="inline">
-              <Menu.Item key="home" onClick={() => navigateRoute("/")}>
+              <Menu.Item key="home" className="uppercase" onClick={() => navigateRoute("/")}>
                 Home
               </Menu.Item>
-              <Menu.Item key="about" onClick={() => navigateRoute("/about")}>
+              <Menu.Item key="about" className="uppercase" onClick={() => navigateRoute("/about")}>
                 About
               </Menu.Item>
               <SubMenu
                 key="services"
-                title={<p className="text-black">Services</p>}
+                title={<p className="text-black uppercase">Services</p>}
               >
                 {subMenuUrl.map((item) => (
                   <Menu.Item

@@ -53,7 +53,7 @@ const Page = () => {
       </div>
       <div className="main main-raised">
         <div className="container mr-auto ml-auto">
-          <div className="py-20">
+          <div className="min-[480px]:py-20 max-[480px]:pt-[25px] max-[480px]:pb-[40px]">
             <div className="row">
               <div className="ml-auto mr-auto">
                 <div className="flex mb-[50px]">

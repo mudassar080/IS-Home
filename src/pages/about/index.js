@@ -31,16 +31,16 @@ const Page = () => {
       </div>
       <div className="main main-raised">
         <div className="container mr-auto ml-auto">
-          <div className="section">
+          <div className="section max-[480px]:pt-[25px]">
             <div className="row">
               <div className="col-md-8 ml-auto mr-auto">
-                <TextBlock>
+                <p className="text-[#999] text-[17px] font-light min-[480px]:pt-5">
                   Introstellar derived from the words “interstellar“ meaning
                   distance between stars and “introspection” meaning to look
                   inwards. <br />
                   Introstellar is defined as the space or distance within a
                   persons mind.
-                </TextBlock>
+                </p>
                 <br />
                 <h2 className="text-4xl	font-medium">Our Mission</h2>
                 <TextBlock>

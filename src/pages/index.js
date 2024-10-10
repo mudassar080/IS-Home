@@ -71,7 +71,7 @@ const Page = () => {
           <div className="section text-center">
             <div className="row">
               <div className="col-md-8 ml-auto mr-auto">
-                <h2 className="text-4xl	font-medium mt-8">
+                <h2 className="text-4xl	font-medium min-[480px]:mt-8">
                   Partnered with Experienced Lawyers & Firms
                 </h2>
               </div>
